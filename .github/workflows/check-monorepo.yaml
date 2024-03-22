@@ -28,10 +28,8 @@ jobs:
       - name: Execute Lint
         run: pnpm run lint -- --no-fix --format=checkstyle --output-file=_output/lint-report.xml
 
-      - name: Upload Lint Report
+      - name: Report Lint
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: ./github/actions/report-lint
         with:
-          name: lint-report
-          path: |
-            **/*/_output/lint-report.xml
+          report-files: _output/lint-report.xml
