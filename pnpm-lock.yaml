@@ -49,13 +49,13 @@ importers:
         specifier: 8.56.5
         version: 8.56.5
       '@types/node':
-        specifier: ^20.11.24
+        specifier: 20.11.24
         version: 20.11.24
       '@types/react':
-        specifier: ^18.2.61
+        specifier: 18.2.61
         version: 18.2.61
       '@types/react-dom':
-        specifier: ^18.2.19
+        specifier: 18.2.19
         version: 18.2.19
       eslint:
         specifier: 8.57.0
@@ -92,13 +92,13 @@ importers:
         specifier: 8.56.5
         version: 8.56.5
       '@types/node':
-        specifier: ^20.11.24
+        specifier: 20.11.24
         version: 20.11.24
       '@types/react':
-        specifier: ^18.2.61
+        specifier: 18.2.61
         version: 18.2.61
       '@types/react-dom':
-        specifier: ^18.2.19
+        specifier: 18.2.19
         version: 18.2.19
       eslint:
         specifier: 8.57.0
@@ -148,13 +148,13 @@ importers:
         specifier: 8.56.5
         version: 8.56.5
       '@types/node':
-        specifier: ^20.11.24
+        specifier: 20.11.24
         version: 20.11.24
       '@types/react':
-        specifier: ^18.2.61
+        specifier: 18.2.61
         version: 18.2.61
       '@types/react-dom':
-        specifier: ^18.2.19
+        specifier: 18.2.19
         version: 18.2.19
       eslint:
         specifier: 8.57.0
