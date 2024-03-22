@@ -15,12 +15,14 @@ runs:
     - name: Extract Pnpm Version pinned by VOLTA in package.json
       shell: bash
       id: extract-pnpm-version
-      run: echo "::set-output name=version::$(jq -r '.volta.pnpm' ${{ inputs.pnpm-version-file }})"
+      run: |
+        pnpm-version=$(jq -r '.volta.pnpm' ${{ inputs.pnpm-version-file }})
+        echo "pnpm-version=$pnpm-version" >> "$GITHUB_OUTPUT"
 
     - name: Setup pnpm
       uses: pnpm/action-setup@v3
       with:
-        version: ${{ steps.extract-pnpm-version.outputs.version }}
+        version: ${{ steps.extract-pnpm-version.outputs.pnpm-version }}
 
     - name: Setup Node.js
       uses: actions/setup-node@v4
