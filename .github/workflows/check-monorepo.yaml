@@ -1,0 +1,37 @@
+name: Check Monorepo
+
+on:
+  push:
+    paths:
+      - ".github/workflows/check-monorepo.yml"
+      - "package.json"
+      - ".eslintrc.js"
+      - "pnpm-workspace.yaml"
+      - "tsconfig.json"
+      - "turbo.json"
+      - "apps/**/*"
+      - "packages/**/*"
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js and PNPM
+        uses: ./.github/actions/setup
+        with:
+          node-version-file: package.json
+          pnpm-version-file: package.json
+
+      - name: Execute Lint
+        id: lint
+        run: pnpm run lint -- --no-fix --format=checkstyle --output-file=_output/lint-report.xml
+
+      - name: Upload Lint Report
+        if: ${{ steps.lint.outcome == 'failure' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: lint-report
+          path: "**/*/_output/lint-report.xml"

@@ -1,0 +1,21 @@
+name: setup-pnpm
+description: Setup pnpm package manager
+
+inputs:
+  pnpm-version-file:
+    description: Path to the file containing the pnpm version
+    required: false
+    default: package.json
+
+runs:
+  using: composite
+  steps:
+    - name: Extract Pnpm Version pinned by VOLTA in package.json
+      shell: bash
+      id: extract-pnpm-version
+      run: echo "::set-output name=version::$(jq -r '.volta.pnpm' ${{ inputs.pnpm-version-file }})"
+
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v3
+      with:
+        version: ${{ steps.extract-pnpm-version.outputs.version }}

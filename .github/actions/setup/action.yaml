@@ -1,0 +1,28 @@
+name: Setup
+description: Setup Node.js and PNPM
+inputs:
+  node-version-file:
+    description: Path to the file containing the Node.js version
+    required: false
+    default: package.json
+  pnpm-version-file:
+    description: Path to the file containing the PNPM version
+    required: false
+    default: package.json
+runs:
+  using: composite
+  steps:
+    - name: Setup PNPM
+      uses: .github/actions/setup-pnpm
+      with:
+        pnpm-version-file: ${{ inputs.pnpm-version-file }}
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version-file: ${{ inputs.node-version-file }}
+        cache: pnpm
+
+    - name: Install Dependencies
+      shell: bash
+      run: pnpm install --frozen-lockfile
