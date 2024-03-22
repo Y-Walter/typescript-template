@@ -16,8 +16,7 @@ runs:
       shell: bash
       id: extract-pnpm-version
       run: |
-        pnpm-version=$(jq -r '.volta.pnpm' ${{ inputs.pnpm-version-file }})
-        echo "pnpm-version=$pnpm-version" >> "$GITHUB_OUTPUT"
+        echo "pnpm-version=$(jq -r '.volta.pnpm' ${{ inputs.pnpm-version-file }})" >> "$GITHUB_OUTPUT"
 
     - name: Setup pnpm
       uses: pnpm/action-setup@v3
