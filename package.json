@@ -1,5 +1,5 @@
 {
-  "name": "my-turborepo",
+  "name": "typescript-template",
   "private": true,
   "scripts": {
     "build": "turbo build",
@@ -11,10 +11,10 @@
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "prettier": "^3.2.5",
-    "turbo": "latest"
+    "turbo": "1.13.0"
   },
-  "packageManager": "pnpm@8.9.0",
-  "engines": {
-    "node": ">=18"
+  "volta": {
+    "node": "20.11.1",
+    "pnpm": "8.15.5"
   }
 }
