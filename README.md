@@ -1,4 +1,5 @@
 # typescript-template
+
 repository template based on typescript
 
 ## What's inside?
@@ -68,8 +69,8 @@ Learn more about the power of Turborepo:
 - [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
 - [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
 
-
 ## VOLTA
+
 VOLTA is the Javascript Tool Manager. In this repository, VOLTA fix versions of Node.js and pnpm.
 
 Pnpm support is experimental, VOLTA version requires latest or 1.1.1.
