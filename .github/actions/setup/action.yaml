@@ -13,7 +13,7 @@ runs:
   using: composite
   steps:
     - name: Setup PNPM
-      uses: .github/actions/setup-pnpm
+      uses: ./github/actions/setup-pnpm
       with:
         pnpm-version-file: ${{ inputs.pnpm-version-file }}
 
