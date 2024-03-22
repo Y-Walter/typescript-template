@@ -2,15 +2,15 @@ name: Check Monorepo
 
 on:
   push:
-    paths:
-      - ".github/workflows/check-monorepo.yml"
-      - "package.json"
-      - ".eslintrc.js"
-      - "pnpm-workspace.yaml"
-      - "tsconfig.json"
-      - "turbo.json"
-      - "apps/**/*"
-      - "packages/**/*"
+    # paths:
+    # - ".github/workflows/check-monorepo.yml"
+    # - "package.json"
+    # - ".eslintrc.js"
+    # - "pnpm-workspace.yaml"
+    # - "tsconfig.json"
+    # - "turbo.json"
+    # - "apps/**/*"
+    # - "packages/**/*"
 
 jobs:
   lint:
