@@ -26,12 +26,12 @@ jobs:
           pnpm-version-file: package.json
 
       - name: Execute Lint
-        id: lint
         run: pnpm run lint -- --no-fix --format=checkstyle --output-file=_output/lint-report.xml
 
       - name: Upload Lint Report
-        if: ${{ steps.lint.outcome == 'failure' }}
+        if: failure()
         uses: actions/upload-artifact@v4
         with:
           name: lint-report
-          path: "**/*/_output/lint-report.xml"
+          path: |
+            **/*/_output/lint-report.xml
