@@ -2,18 +2,25 @@ name: Check Monorepo
 
 on:
   push:
-    # paths:
-    # - ".github/workflows/check-monorepo.yml"
-    # - "package.json"
-    # - ".eslintrc.js"
-    # - "pnpm-workspace.yaml"
-    # - "tsconfig.json"
-    # - "turbo.json"
-    # - "apps/**/*"
-    # - "packages/**/*"
 
 jobs:
+  typecheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js and PNPM
+        uses: ./.github/actions/setup-node-pnpm
+        with:
+          node-version-file: package.json
+          pnpm-version-file: package.json
+
+      - name: Execute Type Check
+        run: pnpm run typecheck
+
   lint:
+    needs: typecheck
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -26,12 +33,4 @@ jobs:
           pnpm-version-file: package.json
 
       - name: Execute Lint
-        run: pnpm run lint -- --no-fix --format=json --output-file=_output/lint-report.json
-        continue-on-error: true
-
-      # TODO: Change to annotate on Pull Request
-      - name: Upload Lint Report
-        uses: actions/upload-artifact@v4
-        with:
-          name: lint-report
-          path: "**/*/_output/lint-report.json"
+        run: pnpm run lint
