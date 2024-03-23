@@ -32,5 +32,5 @@ jobs:
         if: failure()
         uses: ./.github/actions/report-lint
         with:
-          report-files: |
+          report-files: >-
             **/*_output/lint-report.xml
