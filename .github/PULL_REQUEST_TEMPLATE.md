@@ -1,5 +1,5 @@
 ## What's Changed
 
-## What not to do now
+## What not to Do Now
 
 ## References
