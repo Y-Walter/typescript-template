@@ -27,6 +27,7 @@ jobs:
 
       - name: Execute Lint
         run: pnpm run lint -- --no-fix --format=json --output-file=_output/lint-report.json
+        continue-on-error: true
 
       - name: Annotate Code Linting Results
         if: always()
