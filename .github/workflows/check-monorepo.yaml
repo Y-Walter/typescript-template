@@ -26,10 +26,10 @@ jobs:
           pnpm-version-file: package.json
 
       - name: Execute Lint
-        run: pnpm run lint -- --no-fix --format=checkstyle --output-file=_output/lint-report.xml
+        run: pnpm run lint -- --no-fix --format=json --output-file=_output/lint-report.json
 
-      - name: Report Lint
-        if: failure()
-        uses: ./.github/actions/report-lint
+      - name: Annotate Code Linting Results
+        if: always()
+        uses: ataylorme/eslint-annotate-action@v2
         with:
-          report-file: "**/*_output/lint-report.xml"
+          report-json: "**/*/_output/lint-report.json"
