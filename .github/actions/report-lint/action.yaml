@@ -1,7 +1,7 @@
 name: Report Lint
 description: Report Lint
 inputs:
-  report_files:
+  report_file:
     description: "Report files"
     required: true
     default: ""
@@ -12,7 +12,7 @@ runs:
     - uses: MeilCli/common-lint-reporter/transformer/eslint@v1
       with:
         report_files_follow_symbolic_links: true
-        report_files: ${{ inputs.report_files }}
+        report_files: ${{ inputs.report_file }}
 
     - uses: MeilCli/common-lint-reporter/operator/filter-by-file-changed@v1
 
