@@ -9,7 +9,7 @@ inputs:
 runs:
   using: composite
   steps:
-    - uses: MeilCli/common-lint-reporter/transformer/eslint@1
+    - uses: MeilCli/common-lint-reporter/transformer/eslint@v1
       with:
         report_files_follow_symbolic_links: true
         report_files: ${{ inputs.report_files }}
