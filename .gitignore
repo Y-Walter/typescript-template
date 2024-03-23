@@ -142,3 +142,6 @@ dist
 # Misc
 .DS_Store
 *.pem
+
+
+_output

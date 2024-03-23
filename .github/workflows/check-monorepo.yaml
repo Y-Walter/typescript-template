@@ -1,0 +1,36 @@
+name: Check Monorepo
+
+on:
+  push:
+
+jobs:
+  typecheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js and PNPM
+        uses: ./.github/actions/setup-node-pnpm
+        with:
+          node-version-file: package.json
+          pnpm-version-file: package.json
+
+      - name: Execute Type Check
+        run: pnpm run typecheck
+
+  lint:
+    needs: typecheck
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js and PNPM
+        uses: ./.github/actions/setup-node-pnpm
+        with:
+          node-version-file: package.json
+          pnpm-version-file: package.json
+
+      - name: Execute Lint
+        run: pnpm run lint
