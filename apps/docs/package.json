@@ -20,9 +20,9 @@
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@types/eslint": "8.56.6",
-    "@types/node": "20.11.24",
-    "@types/react": "18.2.61",
-    "@types/react-dom": "18.2.19",
+    "@types/node": "20.11.30",
+    "@types/react": "18.2.69",
+    "@types/react-dom": "18.2.22",
     "eslint": "8.57.0",
     "typescript": "5.4.3"
   },

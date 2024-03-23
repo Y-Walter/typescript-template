@@ -49,14 +49,14 @@ importers:
         specifier: 8.56.6
         version: 8.56.6
       '@types/node':
-        specifier: 20.11.24
-        version: 20.11.24
+        specifier: 20.11.30
+        version: 20.11.30
       '@types/react':
-        specifier: 18.2.61
-        version: 18.2.61
+        specifier: 18.2.69
+        version: 18.2.69
       '@types/react-dom':
-        specifier: 18.2.19
-        version: 18.2.19
+        specifier: 18.2.22
+        version: 18.2.22
       eslint:
         specifier: 8.57.0
         version: 8.57.0
@@ -92,14 +92,14 @@ importers:
         specifier: 8.56.6
         version: 8.56.6
       '@types/node':
-        specifier: 20.11.24
-        version: 20.11.24
+        specifier: 20.11.30
+        version: 20.11.30
       '@types/react':
-        specifier: 18.2.61
-        version: 18.2.61
+        specifier: 18.2.69
+        version: 18.2.69
       '@types/react-dom':
-        specifier: 18.2.19
-        version: 18.2.19
+        specifier: 18.2.22
+        version: 18.2.22
       eslint:
         specifier: 8.57.0
         version: 8.57.0
@@ -143,19 +143,19 @@ importers:
         version: link:../typescript-config
       '@turbo/gen':
         specifier: 1.13.0
-        version: 1.13.0(@types/node@20.11.24)(typescript@5.4.3)
+        version: 1.13.0(@types/node@20.11.30)(typescript@5.4.3)
       '@types/eslint':
         specifier: 8.56.6
         version: 8.56.6
       '@types/node':
-        specifier: 20.11.24
-        version: 20.11.24
+        specifier: 20.11.30
+        version: 20.11.30
       '@types/react':
-        specifier: 18.2.61
-        version: 18.2.61
+        specifier: 18.2.69
+        version: 18.2.69
       '@types/react-dom':
-        specifier: 18.2.19
-        version: 18.2.19
+        specifier: 18.2.22
+        version: 18.2.22
       eslint:
         specifier: 8.57.0
         version: 8.57.0
@@ -694,7 +694,7 @@ packages:
     resolution: {integrity: sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==}
     dev: true
 
-  /@turbo/gen@1.13.0(@types/node@20.11.24)(typescript@5.4.3):
+  /@turbo/gen@1.13.0(@types/node@20.11.30)(typescript@5.4.3):
     resolution: {integrity: sha512-AxIrDubYDLdYBNZC/t3Gn0B7v+zhlM3V7VoMhopKrMWSL0YsjpW/OcDThmV+WglVlkPLmk95ncvXvgfn5RrsBw==}
     hasBin: true
     dependencies:
@@ -706,7 +706,7 @@ packages:
       minimatch: 9.0.3
       node-plop: 0.26.3
       proxy-agent: 6.3.0
-      ts-node: 10.9.1(@types/node@20.11.24)(typescript@5.4.3)
+      ts-node: 10.9.1(@types/node@20.11.30)(typescript@5.4.3)
       update-check: 1.5.4
       validate-npm-package-name: 5.0.0
     transitivePeerDependencies:
@@ -750,7 +750,7 @@ packages:
     resolution: {integrity: sha512-ZUxbzKl0IfJILTS6t7ip5fQQM/J3TJYubDm3nMbgubNNYS62eXeUpoLUC8/7fJNiFYHTrGPQn7hspDUzIHX3UA==}
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 20.11.24
+      '@types/node': 20.11.30
     dev: true
 
   /@types/inquirer@6.5.0:
@@ -772,8 +772,8 @@ packages:
     resolution: {integrity: sha512-K0VQKziLUWkVKiRVrx4a40iPaxTUefQmjtkQofBkYRcoaaL/8rhwDWww9qWbrgicNOgnpIsMxyNIUM4+n6dUIA==}
     dev: true
 
-  /@types/node@20.11.24:
-    resolution: {integrity: sha512-Kza43ewS3xoLgCEpQrsT+xRo/EJej1y0kVYGiLFE1NEODXGzTfwiC6tXTLMQskn1X4/Rjlh0MQUvx9W+L9long==}
+  /@types/node@20.11.30:
+    resolution: {integrity: sha512-dHM6ZxwlmuZaRmUPfv1p+KrdD1Dci04FbdEm/9wEMouFqxYoFl5aMkt0VMAUtYRQDyYvD41WJLukhq/ha3YuTw==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -786,14 +786,14 @@ packages:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
     dev: true
 
-  /@types/react-dom@18.2.19:
-    resolution: {integrity: sha512-aZvQL6uUbIJpjZk4U8JZGbau9KDeAwMfmhyWorxgBkqDIEf6ROjRozcmPIicqsUwPUjbkDfHKgGee1Lq65APcA==}
+  /@types/react-dom@18.2.22:
+    resolution: {integrity: sha512-fHkBXPeNtfvri6gdsMYyW+dW7RXFo6Ad09nLFK0VQWR7yGLai/Cyvyj696gbwYvBnhGtevUG9cET0pmUbMtoPQ==}
     dependencies:
-      '@types/react': 18.2.61
+      '@types/react': 18.2.69
     dev: true
 
-  /@types/react@18.2.61:
-    resolution: {integrity: sha512-NURTN0qNnJa7O/k4XUkEW2yfygA+NxS0V5h1+kp9jPwhzZy95q3ADoGMP0+JypMhrZBTTgjKAUlTctde1zzeQA==}
+  /@types/react@18.2.69:
+    resolution: {integrity: sha512-W1HOMUWY/1Yyw0ba5TkCV+oqynRjG7BnteBB+B7JmAK7iw3l2SW+VGOxL+akPweix6jk2NNJtyJKpn4TkpfK3Q==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.3
@@ -811,7 +811,7 @@ packages:
   /@types/through@0.0.30:
     resolution: {integrity: sha512-FvnCJljyxhPM3gkRgWmxmDZyAQSiBQQWLI0A0VFL0K7W1oRUrPJSqNO0NvTnLkBcotdlp3lKvaT0JrnyRDkzOg==}
     dependencies:
-      '@types/node': 20.11.24
+      '@types/node': 20.11.30
     dev: true
 
   /@types/tinycolor2@1.4.6:
@@ -4575,7 +4575,7 @@ packages:
       typescript: 5.4.3
     dev: true
 
-  /ts-node@10.9.1(@types/node@20.11.24)(typescript@5.4.3):
+  /ts-node@10.9.1(@types/node@20.11.30)(typescript@5.4.3):
     resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
     hasBin: true
     peerDependencies:
@@ -4594,7 +4594,7 @@ packages:
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 20.11.24
+      '@types/node': 20.11.30
       acorn: 8.10.0
       acorn-walk: 8.2.0
       arg: 4.1.3
