@@ -14,22 +14,22 @@ inputs:
 runs:
   using: composite
   steps:
-    - name: Setup Node.js
-      uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4
-      with:
-        node-version-file: ${{ inputs.node-version-file }}
-        cache: pnpm
-
     - name: Extract Pnpm Version pinned by VOLTA in ${{ inputs.pnpm-version-file }}
       shell: bash
       id: extract-pnpm-version
       run: |
         echo "pnpm-version=$(jq -r '.volta.pnpm' ${{ inputs.pnpm-version-file }})" >> "$GITHUB_OUTPUT"
 
-    - name: Setup pnpm
+    - name: Install PNPM
       shell: bash
       run: |
-        npm install -g pnpm@${{ steps.extract-pnpm-version.outputs.pnpm-version }}
+        curl -fsSL https://get.pnpm.io/install.sh | env PNPM_VERSION=${{ steps.extract-pnpm-version.outputs.pnpm-version }} sh -
+
+    - name: Setup Node.js
+      uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4
+      with:
+        node-version-file: ${{ inputs.node-version-file }}
+        cache: pnpm
 
     - name: Install Dependencies
       shell: bash
