@@ -1,5 +1,6 @@
 name: Setup
 description: Setup Node.js and PNPM
+
 inputs:
   node-version-file:
     description: Path to the file containing the Node.js version
@@ -9,10 +10,11 @@ inputs:
     description: Path to the file containing the PNPM version
     required: false
     default: package.json
+
 runs:
   using: composite
   steps:
-    - name: Extract Pnpm Version pinned by VOLTA in package.json
+    - name: Extract Pnpm Version pinned by VOLTA in ${{ inputs.pnpm-version-file }}
       shell: bash
       id: extract-pnpm-version
       run: |

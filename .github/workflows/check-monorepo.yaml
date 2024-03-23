@@ -30,7 +30,7 @@ jobs:
 
       - name: Report Lint
         if: failure()
-        uses: ./github/actions/report-lint
+        uses: ./.github/actions/report-lint
         with:
           report-files: |
             **/*_output/lint-report.xml
