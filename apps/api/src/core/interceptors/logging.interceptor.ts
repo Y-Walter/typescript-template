@@ -8,6 +8,7 @@ import { Observable, tap } from "rxjs";
 
 @Injectable()
 export class LoggingInterceptor implements NestInterceptor {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   intercept(context: ExecutionContext, next: CallHandler): Observable<any> {
     console.log("start...");
 
