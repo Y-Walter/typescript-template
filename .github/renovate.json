@@ -4,7 +4,8 @@
   "extends": ["config:js-app", "helpers:pinGitHubActionDigests"],
   "labels": ["dependencies"],
   "major": {
-    "dependencyDashboardApproval": true
+    "dependencyDashboardApproval": true,
+    "automerge": false
   },
   "packageRules": [
     {
@@ -18,6 +19,17 @@
       "matchPackagePatterns": ["eslint"],
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "automerge": true
+    },
+    {
+      "groupName": "jest",
+      "matchPackagePatterns": ["jest"],
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    },
+    {
+      "groupName": "nestjs",
+      "matchPackagePatterns": ["nestjs"],
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"]
     }
   ],
   "schedule": ["at any time"],
