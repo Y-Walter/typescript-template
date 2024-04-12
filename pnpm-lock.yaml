@@ -131,8 +131,8 @@ importers:
         version: 18.2.0(react@18.2.0)
     devDependencies:
       '@next/eslint-plugin-next':
-        specifier: 14.2.0
-        version: 14.2.0
+        specifier: 14.2.1
+        version: 14.2.1
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
@@ -174,8 +174,8 @@ importers:
         version: 18.2.0(react@18.2.0)
     devDependencies:
       '@next/eslint-plugin-next':
-        specifier: 14.2.0
-        version: 14.2.0
+        specifier: 14.2.1
+        version: 14.2.1
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
@@ -1608,8 +1608,8 @@ packages:
     resolution: {integrity: sha512-e7X7bbn3Z6DWnDi75UWn+REgAbLEqxI8Tq2pkFOFAMpWAWApz/YCUhtWMWn410h8Q2fYiYL7Yg5OlxMOCfFjJQ==}
     dev: false
 
-  /@next/eslint-plugin-next@14.2.0:
-    resolution: {integrity: sha512-QkM01VPhwcupezVevy9Uyl1rmpg2PimhMjkb+ySmnPgSKUUM/PGGRQxdFgMpHv/JzQoC8kRySgKeM441GiizcA==}
+  /@next/eslint-plugin-next@14.2.1:
+    resolution: {integrity: sha512-Fp+mthEBjkn8r9qd6o4JgxKp0IDEzW0VYHD8ZC05xS5/lFNwHKuOdr2kVhWG7BQCO9L6eeepshM1Wbs2T+LgSg==}
     dependencies:
       glob: 10.3.10
     dev: true
@@ -4820,7 +4820,7 @@ packages:
     dependencies:
       foreground-child: 3.1.1
       jackspeak: 2.3.6
-      minimatch: 9.0.3
+      minimatch: 9.0.4
       minipass: 7.0.4
       path-scurry: 1.10.1
     dev: true
