@@ -1,29 +1,40 @@
-const { resolve } = require("node:path");
+const onlyWarn = require("eslint-plugin-only-warn");
+const turbo = require("eslint-config-turbo");
+const js = require("@eslint/js");
+const tslint = require("typescript-eslint");
+const prettier = require("eslint-config-prettier");
 
-const project = resolve(process.cwd(), "tsconfig.json");
-
-/** @type {import("eslint").Linter.Config} */
-module.exports = {
-  plugins: ["only-warn"],
-  extends: [
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier",
-    "eslint-config-turbo",
-  ],
-  env: {
-    node: true,
-    // jest: true,
+/**
+ * @type {import("eslint").Linter.FlatConfig[]}
+ */
+module.exports = tslint.config(
+  {
+    files: ["*.ts"],
   },
-  settings: {
-    "import/resolver": {
-      typescript: {
-        project,
+  {
+    ignores: [
+      // Ignore dotfiles
+      ".*.js",
+      "eslint.config.js",
+      "node_modules/",
+      "dist/",
+    ],
+  },
+  js.configs.recommended,
+  ...tslint.configs.recommended,
+  {
+    languageOptions: {
+      globals: {
+        NodeJS: true,
+        jest: true,
       },
     },
   },
-  rules: {
-    "@typescript-eslint/no-explicit-any": "off",
-  },
-  ignorePatterns: [".*.js", "node_modules/", "dist/"],
-};
+  {
+    plugins: {
+      "eslint-config-turbo": turbo,
+      prettier,
+      "only-warn": onlyWarn,
+    },
+  }
+);

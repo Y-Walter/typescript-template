@@ -1,6 +1,6 @@
 import type { Config as JestConfig } from "jest";
 
-export default async (): Promise<JestConfig> => {
+export default (): JestConfig => {
   return {
     verbose: true,
     testEnvironment: "node",
