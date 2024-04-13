@@ -16,5 +16,6 @@
   "editor.wordWrap": "on",
   "prettier.endOfLine": "lf",
   "cSpell.words": ["automerge", "nestjs", "typecheck", "unmock"],
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "eslint.experimental.useFlatConfig": true
 }

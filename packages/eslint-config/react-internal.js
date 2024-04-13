@@ -1,4 +1,9 @@
 const { resolve } = require("node:path");
+const tslint = require("typescript-eslint");
+const eslint = require("@eslint/js");
+const prettier = require("eslint-config-prettier");
+const turbo = require("eslint-config-turbo");
+const onlyWarn = require("eslint-plugin-only-warn");
 
 const project = resolve(process.cwd(), "tsconfig.json");
 
@@ -11,33 +16,45 @@ const project = resolve(process.cwd(), "tsconfig.json");
  * For more information, see https://github.com/vercel/style-guide
  *
  */
-
-/** @type {import("eslint").Linter.Config} */
-module.exports = {
-  extends: ["eslint:recommended", "prettier", "eslint-config-turbo"],
-  plugins: ["only-warn"],
-  globals: {
-    React: true,
-    JSX: true,
+/** @type  {import("eslint").Linter.FlatConfig[]} */
+module.exports = [
+  {
+    files: ["*.ts", "*.tsx"],
   },
-  env: {
-    browser: true,
+  {
+    ignores: [
+      // Ignore dotfiles
+      ".*.js",
+      "eslint.config.js",
+      "node_modules/",
+      "dist/",
+    ],
   },
-  settings: {
-    "import/resolver": {
-      typescript: {
-        project,
+  eslint.configs.recommended,
+  {
+    languageOptions: {
+      globals: {
+        React: true,
+        JSX: true,
+        browser: true,
       },
     },
   },
-  ignorePatterns: [
-    // Ignore dotfiles
-    ".*.js",
-    "node_modules/",
-    "dist/",
-  ],
-  overrides: [
-    // Force ESLint to detect .tsx files
-    { files: ["*.js?(x)", "*.ts?(x)"] },
-  ],
-};
+  ...tslint.configs.recommended,
+  {
+    plugins: {
+      "eslint-config-turbo": turbo,
+      prettier,
+      "only-warn": onlyWarn,
+    },
+  },
+  {
+    settings: {
+      "import/resolver": {
+        typescript: {
+          project,
+        },
+      },
+    },
+  },
+];
