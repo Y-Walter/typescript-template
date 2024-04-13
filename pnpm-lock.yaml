@@ -97,7 +97,7 @@ importers:
         specifier: 6.0.2
         version: 6.0.2
       env-cmd:
-        specifier: ^10.1.0
+        specifier: 10.1.0
         version: 10.1.0
       eslint:
         specifier: 8.57.0
@@ -155,7 +155,7 @@ importers:
         specifier: 18.2.25
         version: 18.2.25
       env-cmd:
-        specifier: ^10.1.0
+        specifier: 10.1.0
         version: 10.1.0
       eslint:
         specifier: 8.57.0
@@ -201,7 +201,7 @@ importers:
         specifier: 18.2.25
         version: 18.2.25
       env-cmd:
-        specifier: ^10.1.0
+        specifier: 10.1.0
         version: 10.1.0
       eslint:
         specifier: 8.57.0
@@ -260,7 +260,7 @@ importers:
         specifier: 18.2.25
         version: 18.2.25
       env-cmd:
-        specifier: ^10.1.0
+        specifier: 10.1.0
         version: 10.1.0
       eslint:
         specifier: 8.57.0
