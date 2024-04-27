@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "env-cmd --environments dev next dev",
     "build": "next build",
     "start": "next start",
     "lint": "env-cmd --environments lint eslint --max-warnings 0",
