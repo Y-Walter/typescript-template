@@ -2,6 +2,12 @@ name: Check Monorepo
 
 on:
   push:
+    paths:
+      - "packages/**"
+      - "apps/*/src/**"
+      - "pnpm-lock.yaml"
+      - ".github/workflows/check-monorepo.yaml"
+      - ".github/actions/setup-node-pnpm/**"
 
 jobs:
   typecheck:
