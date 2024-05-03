@@ -213,8 +213,8 @@ importers:
   packages/eslint-config:
     devDependencies:
       '@eslint/js':
-        specifier: 9.1.1
-        version: 9.1.1
+        specifier: 9.2.0
+        version: 9.2.0
       '@vercel/style-guide':
         specifier: 6.0.0
         version: 6.0.0(@next/eslint-plugin-next@14.2.3)(eslint@8.57.0)(jest@29.7.0)(prettier@3.2.5)(typescript@5.4.5)
@@ -604,8 +604,8 @@ packages:
     resolution: {integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
-  '@eslint/js@9.1.1':
-    resolution: {integrity: sha512-5WoDz3Y19Bg2BnErkZTp0en+c/i9PvgFS7MBe1+m60HjFr0hrphlAGp4yzI7pxpt4xShln4ZyYp4neJm8hmOkQ==}
+  '@eslint/js@9.2.0':
+    resolution: {integrity: sha512-ESiIudvhoYni+MdsI8oD7skpprZ89qKocwRM2KEvhhBJ9nl5MRh7BXU5GTod7Mdygq+AUl+QzId6iWJKR/wABA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@graphql-tools/merge@8.4.2':
@@ -5093,7 +5093,7 @@ snapshots:
 
   '@eslint/js@8.57.0': {}
 
-  '@eslint/js@9.1.1': {}
+  '@eslint/js@9.2.0': {}
 
   '@graphql-tools/merge@8.4.2(graphql@16.8.1)':
     dependencies:
