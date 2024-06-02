@@ -1,0 +1,23 @@
+{
+  "name": "typescript-template",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "typecheck": "turbo typecheck",
+    "test": "turbo test",
+    "test:e2e": "turbo test:e2e"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "prettier": "3.3.0",
+    "turbo": "1.13.3"
+  },
+  "volta": {
+    "node": "20.14.0",
+    "pnpm": "9.1.4"
+  }
+}

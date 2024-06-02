@@ -1,0 +1,74 @@
+name: Check Monorepo
+
+on:
+  push:
+    paths:
+      - "packages/**"
+      - "apps/*/src/**"
+      - "pnpm-lock.yaml"
+      - ".github/workflows/check-monorepo.yaml"
+      - ".github/actions/setup-node-pnpm/**"
+
+jobs:
+  typecheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4
+
+      - name: Setup Node.js and PNPM
+        uses: ./.github/actions/setup-node-pnpm
+        with:
+          node-version-file: package.json
+          pnpm-version-file: package.json
+
+      - name: Execute Type Check
+        run: pnpm run typecheck
+
+  lint:
+    needs: typecheck
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4
+
+      - name: Setup Node.js and PNPM
+        uses: ./.github/actions/setup-node-pnpm
+        with:
+          node-version-file: package.json
+          pnpm-version-file: package.json
+
+      - name: Execute Lint
+        run: pnpm run lint
+
+  test:
+    needs: lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4
+
+      - name: Setup Node.js and PNPM
+        uses: ./.github/actions/setup-node-pnpm
+        with:
+          node-version-file: package.json
+          pnpm-version-file: package.json
+
+      - name: Execute Test
+        run: pnpm run test
+
+  test-e2e:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4
+
+      - name: Setup Node.js and PNPM
+        uses: ./.github/actions/setup-node-pnpm
+        with:
+          node-version-file: package.json
+          pnpm-version-file: package.json
+
+      - name: Execute E2E Test
+        run: pnpm run test:e2e

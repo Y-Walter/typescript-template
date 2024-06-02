@@ -128,3 +128,20 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Turbo
+.turbo
+
+# Vercel
+.vercel
+
+# Dependencies
+.pnp
+.pnp.js
+
+# Misc
+.DS_Store
+*.pem
+
+
+_output
