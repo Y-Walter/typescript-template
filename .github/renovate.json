@@ -3,6 +3,7 @@
   "reviewers": [],
   "extends": ["config:js-app", "helpers:pinGitHubActionDigests"],
   "labels": ["dependencies"],
+  "baseBranches": ["develop"],
   "major": {
     "dependencyDashboardApproval": true,
     "automerge": false
