@@ -34,7 +34,7 @@
     "@nestjs/testing": "10.3.9",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@types/eslint": "8.56.10",
+    "@types/eslint": "8.56.11",
     "@types/jest": "29.5.12",
     "@types/node": "20.14.11",
     "@types/supertest": "6.0.2",
