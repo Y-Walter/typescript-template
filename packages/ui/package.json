@@ -15,7 +15,7 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@turbo/gen": "1.13.4",
+    "@turbo/gen": "2.0.12",
     "@types/node": "20.14.11",
     "@types/eslint": "8.56.11",
     "@types/react": "18.3.3",
