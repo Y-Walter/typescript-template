@@ -12,7 +12,7 @@
     "test:e2e": "jest --config ./jest.e2e.config.ts"
   },
   "dependencies": {
-    "@apollo/server": "4.10.4",
+    "@apollo/server": "4.11.0",
     "@graphql-tools/utils": "10.2.2",
     "@nestjs/apollo": "12.1.0",
     "@nestjs/common": "10.3.9",
