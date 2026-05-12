@@ -25,7 +25,7 @@
     "graphql-query-complexity": "1.0.0",
     "graphql-subscriptions": "2.0.0",
     "reflect-metadata": "0.2.2",
-    "rxjs": "7.8.1"
+    "rxjs": "7.8.2"
   },
   "devDependencies": {
     "@jest/types": "29.6.3",
